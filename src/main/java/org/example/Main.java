@@ -117,7 +117,7 @@ public class Main {
             for (int i=0;i< r.getPartidos().size();i++){
                 System.out.print("Encuentro nº"+(i+1)+": ("+r.getPartidos().get(i).getEquipo1()+ " - "+r.getPartidos().get(i).getEquipo2()+"): " + r.getPartidos().get(i).getResultado() +"\n");
                 for (Persona p : personas.values()){
-                    System.out.println("    _ " + p + " " + p.getPronosticosRonda(r.getNumero()).get(i)); //imprimimos el pronostico de cada persona
+                    System.out.println("\t_ " + p + " " + p.getPronosticosRonda(r.getNumero()).get(i)); //imprimimos el pronostico de cada persona
                 }
             }
             //imprimimos el resultado
