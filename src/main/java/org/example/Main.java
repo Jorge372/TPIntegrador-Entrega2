@@ -113,7 +113,7 @@ public class Main {
 
         //imprimimos los pronosticos por ronda
         for (Ronda r : rondas){
-            System.out.println("RONDA NUMERO "+r.getNumero()+":"); //imprimimos de cada ronda
+            System.out.println("\t\t\tRONDA NUMERO "+r.getNumero()+":"); //imprimimos de cada ronda
             for (int i=0;i< r.getPartidos().size();i++){
                 System.out.print("Encuentro nº"+(i+1)+": ("+r.getPartidos().get(i).getEquipo1()+ " - "+r.getPartidos().get(i).getEquipo2()+"): " + r.getPartidos().get(i).getResultado() +"\n");
                 for (Persona p : personas.values()){
@@ -123,7 +123,7 @@ public class Main {
             //imprimimos el resultado
             System.out.println();
             for (Persona p : personas.values()) {
-                System.out.println("    " + p+" sumo " + r.getPuntos(p.getPronosticosRonda(r.getNumero())) + " PUNTO/S en la ronda "+r.getNumero());
+                System.out.println("\t" + p+" sumo " + r.getPuntos(p.getPronosticosRonda(r.getNumero())) + " PUNTO/S en la ronda "+r.getNumero());
                 p.sumarPuntos(r.getPuntos(p.getPronosticosRonda(r.getNumero())));
             }
             System.out.println("-----------------------------------------------------------------------------");
